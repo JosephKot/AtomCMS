@@ -17,23 +17,49 @@
 		
 		<link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
 		
-		<!-- Debug button -->
-		<style>
-		#btn-debug{
-			position:absolute;
-		}
+<style>
+	
+	html,
+	body {
+	  height: 100%;
+	  /* The html and body elements cannot have any padding or margin. */
+	}
+	
+	/* Wrapper for page content to push down footer */
+	#wrap {
+	  min-height: 100%;
+	  height: auto;
+	  /* Negative indent footer by its height */
+	  margin: 0 auto -60px;
+	  /* Pad bottom by footer height */
+	  padding: 0 0 60px;
+	}
+	
+	/* Set the fixed height of the footer here */
+	#footer {
+	  height: 60px;
+	  background-color: #f5f5f5;
+	}
+	
+	#btn-debug {
+		position: absolute;
+	}	
+	
+	#console-debug {
+		position: absolute;
+		top: 50px;
+		left:0px;
+		width:30%;
+		min-width:400px;
+		height:700px;
+		overflow-y:scroll;
+		background-color: #FFFFFF;
+		box-shadow: 2px 2px 5px #CCCCCC;
+	}
+	#console-debug pre {
 		
-		#console-debug{
-			position:absolute;
-			top:50px;
-			left:0;
-			background-color:#fff;
-			box-shadow:5px 5px 5px #333;
-			width:60%;
-			height:700px;
-			overflow-y:scroll;
-		}
 		
-		#console-debug pre{
-		}
-		</style>
+	}
+	
+	
+</style>

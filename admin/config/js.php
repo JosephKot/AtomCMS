@@ -1,41 +1,55 @@
 <?php
-//JavaScript
-?>	
-		
-<!-- jQuery CDN -->
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+// Javascript:
 
-<!-- jquery UI -->
+
+
+
+
+?>
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- jQuery UI -->
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-<!-- TinyMCE --->
+<!-- TinyMCE -->
 <script src="js/tinymce/tinymce.min.js"></script>
 
-<!-- Dropzone -->
-<script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-<!-- <script src="js/dropzone.js"></script> -->
+<!-- Dropzone.js -->
+<script src="js/dropzone.js"></script>
+
+<!-- Atom.SaveOnBlur.js -->
+<script src="js/jquery.atom.SaveOnBlur.js"></script>
 
 <script>
-	$(document).ready(function(){
+	
+	$(document).ready(function() {
+		
 		$("#console-debug").hide();
 		
 		$("#btn-debug").click(function(){
+			
 			$("#console-debug").toggle();
+			
 		});
+		
 		
 		$(".btn-delete").on("click", function() {
 			
 			var selected = $(this).attr("id");
 			var pageid = selected.split("del_").join("");
 			
-			var confirmed = confirm("Are you sure that you want to delete this page?");
+			var confirmed = confirm("Are you sure you want to delete this page?");
 			
 			if(confirmed == true) {
+				
 				$.get("ajax/pages.php?id="+pageid);
-				$("#page_"+pageid).remove();
+				
+				$("#page_"+pageid).remove();				
+				
 			}
 			
 
@@ -44,38 +58,40 @@
 			
 		})
 		
+		
 		$("#sort-nav").sortable({
 			cursor: "move",
 			update: function() {
 				var order = $(this).sortable("serialize");
 				$.get("ajax/list-sort.php", order);
 			}
-			
 		});
 
-		$('.nav-form').submit(function(event) {
 
+		$('.nav-form').submit(function(event){
+			
 			var navData = $(this).serializeArray();
 			var navLabel = $('input[name=label]').val();
 			var navID = $('input[name=id]').val();
-
+		
+			
 			$.ajax({
-
+				
 				url: "ajax/navigation.php",
 				type: "POST",
-				data: navData 
-
-			}).done(function() {
-
+				data: navData
+				
+			}).done(function(){
+				
 				$("#label_"+navID).html(navLabel);
-
+				
 			});
-
-
-
+			
+			
 			event.preventDefault();
-		
+			
 		});
+		
 		
 	}); // END document.ready();
 	

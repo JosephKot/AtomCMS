@@ -10,7 +10,7 @@ function data_setting_value($dbc, $id){
 	return $data['value'];
 }
 
-function data_post($dbc, $id){
+function data_post($dbc, $id) {
 	
 	if(is_numeric($id)) {
 		$cond = "WHERE id = $id";
@@ -20,21 +20,23 @@ function data_post($dbc, $id){
 	
 	$q = "SELECT * FROM posts $cond";
 	$r = mysqli_query($dbc, $q);
-
-	$data = mysqli_fetch_assoc($r);
+	
+	$data = mysqli_fetch_assoc($r);	
 	
 	$data['body_nohtml'] = strip_tags($data['body']);
 	
-	if($data['body'] == $data['body_nohtml']){
+	if($data['body'] == $data['body_nohtml']) {
+		
 		$data['body_formatted'] = '<p>'.$data['body'].'</p>';
+		
 	} else {
+		
 		$data['body_formatted'] = $data['body'];
+		
 	}
 	
-	
-	
 	return $data;
-
+	
 }
 
 
