@@ -10,6 +10,17 @@ function data_setting_value($dbc, $id){
 	return $data['value'];
 }
 
+function data_post_type($dbc, $id) {
+	
+	$q = "SELECT * FROM post_types WHERE id = $id";
+	$r = mysqli_query($dbc, $q);
+	
+	$data = mysqli_fetch_assoc($r);	
+
+	return $data;
+
+}
+
 function data_post($dbc, $id) {
 	
 	if(is_numeric($id)) {

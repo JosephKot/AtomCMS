@@ -30,7 +30,7 @@ if(!isset($path['call_parts'][0]) || $path['call_parts'][0] == '' ){
 
 # Page Setup:
 $page = data_post($dbc, $path['call_parts'][0]);
-
+$view = data_post_type($dbc, $page['type']);
 
 
 
