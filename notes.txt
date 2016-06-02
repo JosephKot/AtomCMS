@@ -1,2 +1,4 @@
 Logins:
 joseph@codemode.ca - password1
+
+Just testing my connection to GitHub...
