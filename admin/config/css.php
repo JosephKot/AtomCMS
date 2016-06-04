@@ -21,6 +21,9 @@
 <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
 <!-- <link href="css/dropzone.css"> -->
 
+<!-- jquery.atom.SaveOnBlur.css -->
+<link rel="stylesheet" href="css/jquery.atom.SaveOnBlur.css">
+
 
 
 <style>

@@ -21,6 +21,9 @@
 <!-- Dropzone.js -->
 <script src="js/dropzone.js"></script>
 
+<!-- jquery.atom.SaveOnBlur.js -->
+<script src="js/jquery.atom.SaveOnBlur.js"></script>
+
 <script>
 	$(document).ready(function(){
 		$("#console-debug").hide();

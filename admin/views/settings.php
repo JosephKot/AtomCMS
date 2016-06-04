@@ -32,7 +32,7 @@
 				<div class="form-group">
 				
 					<label class="sr-only" for="value">Value:</label>
-					<input class="form-control" type="text" name="value" id="value" value="<?php echo $opened['value']; ?>"placeholder="Value" autocomplete="off">
+					<input class="form-control blur-save" data-id="<?php echo $opened['id']; ?>" data-label="Setting Value" data-db="settings-value" type="text" name="value" id="value" value="<?php echo $opened['value']; ?>" placeholder="Value" autocomplete="off">
 				
 				</div>
 				
