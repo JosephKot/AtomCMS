@@ -17,15 +17,15 @@
 			
 				<div class="form-group">
 				
-					<label class="sr-only" for="id">Id:</label>
-					<input class="form-control" type="text" name="id" id="id" value="<?php echo $opened['id']; ?>"placeholder="id-name" autocomplete="off">
+					<label class="sr-only" for="id">ID:</label>
+					<input class="form-control" data-id="<?php echo $opened['id']; ?>" data-label="Setting ID" data-db="settings-id" type="text" name="id" id="id" value="<?php echo $opened['id']; ?>"placeholder="id-name" autocomplete="off" disabled>
 				
 				</div>
 				
 				<div class="form-group">
 				
 					<label class="sr-only" for="label">Label:</label>
-					<input class="form-control" type="text" name="label" id="label" value="<?php echo $opened['label']; ?>"placeholder="Label" autocomplete="off">
+					<input class="form-control blur-save" data-id="<?php echo $opened['id']; ?>" data-label="Setting Label" data-db="settings-label" type="text" name="label" id="label" value="<?php echo $opened['label']; ?>"placeholder="Label" autocomplete="off">
 				
 				</div>
 				

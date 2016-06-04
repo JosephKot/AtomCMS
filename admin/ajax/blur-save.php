@@ -16,7 +16,9 @@
 	$table = $db[0]; // Store the table name.
 	$field = $db[1]; // Store the field name.
 
-
+	echo'<pre>';
+	print_r($_GET);
+	echo '<pre>';
 
 	if($action == 'save') {
 	
