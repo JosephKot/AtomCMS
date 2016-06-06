@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	// Auto Save Field:
 	$('.blur-save').on('focus', function(){
-	  $(this).addClass('blur-focus');
+	  $(this).addClass('input-focus');
 	});
 	
 	$('.blur-save').on('blur', function(){
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	  var db = $(this).attr("data-db"); // Database table-field string.
 	  var value = $(this).val(); // New value for the field.
 	  
-	  $(this).removeClass('blur-focus');
+	  $(this).removeClass('input-focus');
 	  
 	  	$.get( "ajax/blur-save.php?id="+id+"&value="+value+"&db="+db+"&action=save", function( html ) {
 	    
